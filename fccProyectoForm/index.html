@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FormularioTitle</title>
+    <title>freeCodeCamp Survey</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>freeCodeCamp Survey Form</h1>
-    <p>Thank you for taking the time to help us improve the platform</p>
-    <form action="https://register-demo.freecodecamp.org">
-      <fieldset>
-        <label for="name-complete"
-          >Name
-          <textarea
-            name="name-complete"
-            id="name-complete"
-            cols="30"
-            rows="1"
-            placeholder="Enter your name"
-          ></textarea>
-        </label>
+    <header class="header">
+      <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
+      <p id="description" class="text-center">Please fill out the survey, thank you for your time</p>
+    </header>
+    <form action="https://register-demo.freecodecamp.org" class="survey-form">
+      <fieldset class="form-group">
+        <label for="name-complete">Name </label>
+        <input type="text" name="name-complete" id="name-complete" class="form-control" placeholder="Enter your name" required>
+        </fieldset>
+      <fieldset class="form-group">
+        <label for="email">Email </label>
+        <input type="text" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" class="form-control" placeholder="Enter your age" required>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="current-role">Which option best describes your current role</label>
+        <select name="current-role" id="current-role" class="form-control">
+          <option disabled selected value>Select current role</option>
+          <option value="student">Student</option>
+          <option value="ftjob">Full time job</option>
+          <option value="ptjob">Part time job</option>
+          <option value="unemployed">Unemployed</option>
+        </select>
+      </fieldset>
+      <fieldset class="form-group">
+        <p id="">Would you recommend FCC?</p>
+        <label for="recommend">
+          <input name="user-recommend" id="recommend" class="input-radio" type="radio" value="definately">
+         Definitely</label>
+         <label for="recommend">
+          <input name="user-recommend" id="recommend" class="input-radio" type="radio" value="idk">
+         I dont know</label>
+         <label for="recommend">
+          <input name="user-recommend" id="recommend" class="input-radio" type="radio" value="no">
+         No</label>
+         
       </fieldset>
     </form>
   </body>
